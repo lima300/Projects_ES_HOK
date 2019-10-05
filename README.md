@@ -1,4 +1,6 @@
-# Projecto de Egenharia de software do grupo HOK.
+# Livraria HOK.
+
+Sistema para efetuação de vendas de livros.
 
 ### Tecnologia utilizada
 
