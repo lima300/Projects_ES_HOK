@@ -17,11 +17,11 @@ Criar um sistema gerenciador de uma livraria física, que tenha como objetivo ma
 
 O nosso sistema será utilizado pelo atendente (sendo ele um funcionário treinado para a utilização).
 O atendente devera conseguir realizar as seguintes funções:
- •Cadastrar livros e conseguir acompanhar o controle de estoque.
- •Cadastrar o cliente e ver todas as suas compras.
- •Pesquisar informações sobre o livro.
- •Cadastrar seu horário de serviço.
- •Cadastrar compras e gerar notas dessas compras.
- •Conseguir cadastrar e validar cupons de desconto.
+ -Cadastrar livros e conseguir acompanhar o controle de estoque.
+ -Cadastrar o cliente e ver todas as suas compras.
+ -Pesquisar informações sobre o livro.
+ -Cadastrar seu horário de serviço.
+ -Cadastrar compras e gerar notas dessas compras.
+ -Conseguir cadastrar e validar cupons de desconto.
 Com isso podemos ver a necessidade da do uso de 5 tabelas na manipulação de banco de dados.
 
