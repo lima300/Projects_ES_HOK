@@ -10,9 +10,10 @@ Sistema para efetuação de vendas de livros.
 
 - PostgreSQL 11.2
 
-OBJETIVO DO SISTEMA: Criar um sistema gerenciador de uma livraria física, que tenha como objetivo manipular as tabelas livros, clientes, cupons e suas compras.
+### OBJETIVO DO SISTEMA:
+Criar um sistema gerenciador de uma livraria física, que tenha como objetivo manipular as tabelas livros, clientes, cupons e suas compras.
 
-NECESSIDADES:
+#### NECESSIDADES:
 
 O nosso sistema será utilizado pelo atendente (sendo ele um funcionário treinado para a utilização).
 O atendente devera conseguir realizar as seguintes funções:
