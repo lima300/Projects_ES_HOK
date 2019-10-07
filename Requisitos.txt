@@ -1,0 +1,3 @@
+- Descrição do arquivo: Todas as informações relacionadas ao levantamento e análise de requisitos poderão ser armazenados neste arquivo,
+além da manutenção de dados relacionados as previsões acerca da estruturação e implementação do software a ser desenvolvido
+através do estudo das requisições levantadas - 07/10/19;
