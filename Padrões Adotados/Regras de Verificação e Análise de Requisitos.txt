@@ -6,8 +6,8 @@ maiores em linguagem natural para formular uma definição adequada, um evento i
 > Os requisitos deverão ter uma característica modificável, visando a lidar comsituações onde deverão ser implementadas mudanças emergenciais ou previamente planejadas.
 Por consequência, tal regra permitirá que as devidas alterações sejam incorporadas de maneira rápida e eficiente, sem causar grandes impactos ao sistema.
 
-> Requisitos Funcionais e Não Funcionais deverão ser separados e terem nomeclaturas próprias, de maneira que o leitor da documetação possa distinguir os detalhes associados
-às funcionalidades a serem entregues pelo software a parte das restrições e maneiras das quais essas devidas funcionalidades irão se comportar durante a execução do software.
+> Requisitos Funcionais e Não Funcionais deverão ser separados e terem nomeclaturas próprias (RF e RNF, respectivamente), de maneira que o leitor da documetação possa distinguir os detalhes associados
+às funcionalidades a serem entregues pelo software em contraste às restrições e maneiras das quais essas devidas funcionalidades irão se comportar durante a execução do software.
 
 
 
