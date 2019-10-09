@@ -1,0 +1,29 @@
+- Regras para análise e descrição de requisitos:
+
+> Todo requisito deverá ter uma descrição consistente que evite a ocorrência de interpretações. Caso contrário, a ambiguidade forçará a construção de sentenças
+maiores em linguagem natural para formular uma definição adequada, um evento incoveniente que deverá ser evitado durante a construção da documentação.
+
+> Os requisitos deverão ter uma característica modificável, visando a lidar comsituações onde deverão ser implementadas mudanças emergenciais ou previamente planejadas.
+Por consequência, tal regra permitirá que as devidas alterações sejam incorporadas de maneira rápida e eficiente, sem causar grandes impactos ao sistema.
+
+> Requisitos Funcionais e Não Funcionais deverão ser separados e terem nomeclaturas próprias, de maneira que o leitor da documetação possa distinguir os detalhes associados
+às funcionalidades a serem entregues pelo software a parte das restrições e maneiras das quais essas devidas funcionalidades irão se comportar durante a execução do software.
+
+
+
+- Regras para documentação e especificação de requisitos:
+
+> Durante a documentação das requisições levantadas, as definições acerca das necessidades de cada requisitos serão definidas individualmente,
+ uma por vez, de maneira a garantir a singularidade e a especificidade de cada requisito levantado junto do usuário, e por consequência o clareamento 
+ do processo a ser executado pelo software a ser desenvolvido com relação a cada requisição predefinida.
+
+> Durante o processo de elicitação de requisitos, deverá ser definido um glossário de termos específicos a serem usados na documentação, cujas definições 
+deverão ser únicas, fechadas e registradas no mesmo glossário citado. Tal convenção remete a necessidade de criar uma documentação consistente, evitando o 
+registro de termos ou sentenças que possam causar ambiguidade ou inconsistências com relação ao real sentido e descrição de cada item associado ao manual 
+construído pela equipe de desenvolvimento do software.
+
+> Se a análise de um requisito indicar que o mesmo representa um detalhamento de uma outra requisição de mais alto nível, por consequência o processo de
+documentação deverá construir uma estrutura hierárquica, de maneira a encaixar novos requisitos que representem um maior detalhamento de um outro requisito 
+existente. Este detalhamento irá garantir uma maior compreensão e visão acerca das funcionalidades a serem implementadas que atenderão os requisitos especificados.
+Caso uma ou mais requisições não possam ser detalhadas como no processo citado anteriormente, então o requisito em questão representa um caso de uso a ser descrito na
+documentação (requisito macro).
