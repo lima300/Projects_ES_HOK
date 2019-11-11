@@ -1,0 +1,36 @@
+- Regras para codificação do software desenvolvido pelo grupo:
+
+> Comentários nos códigos:
+    Comentários devem ser adotados visando uma simplificação da compreensão da estruturação e 
+funcionamento do código analisado, de maneira que a legibilidade do programa seja priorizada e 
+assimilada pelo programador que esteja estudando o respectivo código.
+
+> Identação de código:
+    Todo código escrito pela equipe de desenvolvimento deverá adotar a identação como uma exigência 
+padronizada a ser assimilada pelo respectivo programador, de maneira que o código desenvolvido apresente
+clareza e legibilidade para qualquer desenvolvedor que esteja analisando o programa construído.
+
+> Declaração prévia de variáveis:
+    Sempre que possível, o programador deverá declarar todas as variáveis a serem usadas no início do código,
+com o objetivo de organizar a sequência de passos a serem executados e melhorar a legibilidade do programa a 
+ser desenvolvido.
+
+> Nomes significativos:
+    Todos os métodos e variáveis devem ser nomeados de maneira que apresentem uma relação direta com o seu objetivo.
+Tal iniciativa colabora para a legibilidade do código, já que facilitará a identificação de quais propósitos, classes,
+e objetos uma variável ou um método podem estar associados, melhorando a compreensão e escrita do programa analisado.
+
+> Modularização:
+    Sempre que possível, o programador deve estruturar um código de maneira modularizada, de maneira que existam
+trechos de códigos separados em componentes. Tal regra permite que o código apresente um alto nível de reutilização
+em diferentes partes do sistema, além de facilitar a manutenção do programa e evitar repetições de um mesmo trecho de 
+código.
+
+> Tratamento de exceções:
+    Sempre que possível, o desenvolvedor deve adotar práticas de tratamento de exceções, visando manter um adequado nível 
+de segurança relacionado a execução do código, levando em consideração que um programa pode apresentar determinados erros
+que podem até mesmo comprometer o funcionamento atual do sistema. Com a adoção de tal prática, essas situações de falhas 
+podem ser tratadas e relatadas ao usuário do programa, contribuindo para o aumento da eficiência e segurança do código desenvolvido.
+
+
+
