@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+</head>
+
+<body>
+  <h1> Clientes </h1>
+
+  <ul>
+  {% for client in clients%}
+    <li><b>{{ client.first_name }} {{client.last_name}} {{client.cpf}}</b></li>
+  {% endfor %}
+  </ul>
+
+</body>
+</html>

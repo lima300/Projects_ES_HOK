@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Book, Client
 from .form import Book_form, Client_form
 
@@ -8,11 +8,36 @@ def save_client(request):
 
     if form.is_valid():
         form.save()
+        return redirect('client_list')
     
     data['form'] = form
 
     return render(request, 'core/client.html', data)
 
+def list_client (request):
+    data = {}
+    data['clients'] = Client.objects.all()
+    
+    return render(request, 'client_list.html', data) 
+
+def update_client(request, pk):
+    client = Client.objects.get(pk=pk)
+    form = Client_form(request.POST or None, instance=client)
+    data = {}
+
+    if form.is_valid():
+        form.save()
+        return redirect('client_list')
+    
+    data['form'] = form
+
+    return render(request, 'core/client.html', data)
+
+def delete_client(request, pk):
+    client = Client.objects.get(pk=pk)
+    client.delete()
+    
+    return redirect('client_list')
 
 def save_book(request):
     form = Book_form(request.POST)
