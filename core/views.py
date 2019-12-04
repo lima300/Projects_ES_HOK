@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Book, Client
-from .form import Book_form, Client_form
+from .models import *
+from .form import *
 
 def save_client(request):
     form = Client_form(request.POST)
@@ -18,7 +18,7 @@ def list_client (request):
     data = {}
     data['clients'] = Client.objects.all()
     
-    return render(request, 'client_list.html', data) 
+    return render(request, 'core/client_list.html', data) 
 
 def update_client(request, pk):
     client = Client.objects.get(pk=pk)
@@ -72,6 +72,40 @@ def delete_book(request, pk):
     book.delete()
 
     return redirect()
+
+def save_cupom(request):
+    form = Cupom_form(request.POST)
+    data = {}
+
+    if form.is_valid():
+        form.save()
+    
+    data['form'] = form
+
+    return render(request, 'core/cupom.html', data)
+
+
+def save_employee(request):
+    form = Employee_form(request.POST)
+    data = {}
+
+    if form.is_valid():
+        form.save()
+
+    data['form'] = form 
+
+    return render(request, 'core/employee.html', data)
+
+def save_sale(request):
+    form = Sale_form(request.POST)
+    data = {}
+
+    if form.is_valid():
+        form.save()
+
+    data['form'] = form 
+
+    return render(request, 'core/sale.html', data)
 
 
 

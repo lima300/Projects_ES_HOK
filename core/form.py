@@ -16,9 +16,14 @@ class Cupom_form(ModelForm):
         model =  Cupom
         fields = ['name', 'discount']
 
-class Sale(ModelForm):
+class Sale_form(ModelForm):
     class Meta:
         model = Sale
-        fields = ['book','client', 'cupom']
+        fields = '__all__'
+
+class Employee_form(ModelForm):
+    class Meta:
+        model = Employee
+        fields = '__all__'
 
 
