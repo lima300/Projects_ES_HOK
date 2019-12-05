@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Buscar Produto</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/BuscarProduto.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <a href="{% url 'menuLivro'%}" class="Flex-3">Voltar</a> 
+        </header>
+        <div class="box">
+            <div class="container" >
+                <h2>Buscar Produto</h2> 
+                <form method="post">
+                {% csrf_token %} 
+                  <p> 
+                    <label for="NomeProduto">Nome</label>
+                    <input id="NomeProduto" name="NomeProduto" required="true"  type="text" placeholder="Ex: nomeProduto"/>
+                  </p>
+
+                <div class="Flex">
+                    <input type="submit" value="Buscar" />
+                    <a href="{% url 'menu' %}" class="Flex-2">Menu Principal</a> 
+                </div>
+
+                </form>
+            </div>  
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
+
+
+
+

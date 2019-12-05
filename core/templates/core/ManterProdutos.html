@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Manter Produtos</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/ManterProdutos.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <a href="{% url 'menu'%}" class="Flex-2">Menu</a>  
+        </header>
+        <div class="container">
+            <div class="teste1">
+                <h2>Produtos</h2>
+                <div class="tabela">
+                    <table id="table">
+                        <tr>
+                            <th class="tableHeader">Nome</th>
+                            <th class="tableHeader">Descrição</th>
+                            <th class="tableHeader">Preço</th>
+                            <th class="tableHeader">Autor</th>
+                            <th class="tableHeader">Editora</th>
+                            <th class="tableHeader">Opções</th>
+                            
+                        </tr>
+                        <!-- Linhas da tabela de dados-->
+                        {% for book in books %}
+                        <tr>
+                            <td class="tdTable">{{book.title}}</td>
+                            <td class="tdTable">{{book.discription}}</td>
+                            <td class="tdTable">{{book.price}}</td>
+                            <td class="tdTable">{{book.author}}</td>
+                            <td class="tdTable">{{book.publisher}}</td>
+                            <td class="tdTable">
+                                <div class="imgs">
+                                    <a href="{% url 'delete_book' pk=book.id%}"><img src="{% static 'Css/excluir.png' %}" title="Excluir Produto"></a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %} 
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
+
+
+
+

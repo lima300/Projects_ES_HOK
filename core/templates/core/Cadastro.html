@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Formulário de Login e Registro com HTML5 e CSS3</title> 
+    <link rel="stylesheet" type="text/css" href= "{% static 'Css/StyleCadastro.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+        </header>
+        <div class="box">
+            <div class="container" >    
+                <div id="cadastro">
+                    <form method="post">
+                    {% csrf_token %} 
+                        <h1>Cadastro</h1> 
+                        
+                        <p> 
+                        <label for="{{form.first_name.id_for_label}}">Nome do Funcionário</label>
+                        <input id="{{form.first_name.id_for_label}}" name="{{form.first_name.name}}" required="required" type="text" placeholder="nome" />
+                        </p>
+
+                        <p> 
+                        <label for="{{form.last_name.id_for_label}}">Nome do Funcionário</label>
+                        <input id="{{form.last_name.id_for_label}}" name="{{form.last_name.name}}" required="required" type="text" placeholder="nome" />
+                        </p>
+                
+                        <p>
+                            <label for="{{form.cpf.id_for_label}}">Cpf do Funcionário</label>
+                            <input id="{{form.cpf.id_for_label}}" name="{{form.cpf.name}}" required="required" type="text" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"/>
+                        </p>
+                        
+                        <p> 
+                        <label for="{{form.email.id_for_label}}">E-mail</label>
+                        <input id="{{form.email.id_for_label}}" name="{{form.email.name}}" required="required" type="email" placeholder="nomeEmail@-service-.com"/> 
+                        </p>
+                        
+                        <p> 
+                        <label for="{{form.password.id_for_label}}">Senha</label>
+                        <input id="{{form.password.id_for_label}}" name="{{form.password.name}}" required="required" type="password" placeholder="ex: 123"/>
+                        </p>
+                        
+                        <p> 
+                        <input type="submit" value="Cadastrar"/> 
+                        </p>
+                        
+                        <p class="link">  
+                        Possui Conta?
+                        <a href="{% url 'login' %}">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
+
+
+
+

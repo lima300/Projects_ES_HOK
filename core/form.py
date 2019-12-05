@@ -19,7 +19,7 @@ class Cupom_form(ModelForm):
 class Sale_form(ModelForm):
     class Meta:
         model = Sale
-        fields = '__all__'
+        exclude = ['price']
 
 class Employee_form(ModelForm):
     class Meta:

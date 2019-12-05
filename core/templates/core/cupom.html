@@ -1,19 +1,46 @@
-<!doctype html>
-
-<html lang="pt">
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Manter Cupons</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/ManterClientes.css'%}" />
 </head>
-
-<body>
-  <form method="POST">
-  {% csrf_token %}
-  {{ form }}
-  <button type="submit">Salvar</button>
-  </form>
-</body>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <a href="{% url 'menu'%}" class="Flex-2">Menu</a>  
+        </header>
+        <div class="container">
+            <div class="teste1">
+                <h2>Cupons</h2>
+                <div class="tabela">
+                    <table id="table">
+                        <tr>
+                            <th class="tableHeader">ID</th>
+                            <th class="tableHeader">Nome</th>
+                            <th class="tableHeader">Valor de Desconto</th>
+                            <th class="tableHeader">Opções</th>
+                        </tr>
+                        <!-- Linhas da tabela de dados-->
+                        <tr>
+                            <td class="tdTable">{{cupom.id}}</td>
+                            <td class="tdTable">{{cupom.name}}</td>
+                            <td class="tdTable">{{cupom.discount}}</td>
+                            <td class="tdTable">
+                                <div class="imgs">
+                                    <a href="{% url 'delete_cupom' pk=cupom.id%}"><img src="{% static 'Css/excluir.png' %}" title="Excluir Cupom"></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
 </html>
+

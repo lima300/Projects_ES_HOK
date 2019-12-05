@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Manter Vendas</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/ManterVendas.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <a href="{% url 'menu'%}" class="Flex-2">Menu</a>  
+        </header>
+        <div class="container">
+            <div class="teste1">
+                <h2>Vendas</h2>
+                <div class="tabela">
+                    <table id="table">
+                        <tr>
+                            <th class="tableHeader">ID</th>
+                            <th class="tableHeader">Cpf (Cliente)</th>
+                            <th class="tableHeader">Cpf (Funcionário)</th>
+                            <th class="tableHeader">Nome (Cupom)</th>
+                            <th class="tableHeader">Nome (Produto)</th>
+                            <th class="tableHeader">Preço</th>
+                            <th class="tableHeader">Opções</th>
+                        </tr>
+                        <!-- Linhas da tabela de dados-->
+                        {% for sale in sales %}
+                        <tr>
+                            <td class="tdTable">{{sale.id}}</td>
+                            <td class="tdTable">{{sale.client.first_name}} {{sale.client.last_name}}</td>
+                            <td class="tdTable">{{sale.employee.first_name}} {{sale.employee.last_name}}</td>
+                            <td class="tdTable">{{sale.cupom.name}}</td>
+                            <td class="tdTable">{{sale.book.title}}</td>
+                            <td class="tdTable">{{sale.price}}
+                            <td class="tdTable">
+                                <div class="imgs">
+                                    <a href="{% url 'update_sale' pk=sale.id %}"><img src="{% static 'Css/alterar.png' %}" title="Alterar Venda"></a>
+                                    <a href="{% url 'delete_sale' pk=sale.id %}"><img src="{% static 'Css/excluir.png' %}" title="Excluir Venda"></a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
+
+
+
+

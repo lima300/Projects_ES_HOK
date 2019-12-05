@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Inserir Produto</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/InserirProduto.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <a href="{% url 'menuLivro'%}" class="Flex-3">Voltar</a> 
+        </header>
+        <div class="box">
+            <div class="container" >
+                <form method="post">
+                {% csrf_token %}   
+                  <h1>Inserir Produto</h1> 
+                  <p> 
+                    <label for="{{form.title.id_for_label}}">Nome</label>
+                    <input id="{{form.title.id_for_label}}" name="{{form.title.name}}" required="required" type="text" placeholder="Ex: nomeProduto"/>
+                  </p>
+                    
+                  <p> 
+                    <label for="{{form.discription.id_for_label}}">Descrição</label>
+                    <input id="{{form.discription.id_for_label}}" name="{{form.discription.name}}" required="required" type="text" placeholder="Ex: descriçãoProduto"/> 
+                  </p>
+
+                  <p> 
+                    <label for="{{form.price.id_for_label}}">Preço</label>
+                    <input id="{{form.price.id_for_label}}" name="{{form.price.name}}" required="required" type="text" placeholder="Ex: 45,00"/> 
+                 </p>
+                
+                 <p> 
+                   <label for="{{form.author.id_for_label}}">Autor</label>
+                   <input id="{{form.author.id_for_label}}" name="{{form.author.name}}" required="required" type="text" placeholder="Ex: nomeAutor"/> 
+                 </p>
+
+                 <p> 
+                    <label for="{{form.publisher.id_for_label}}">Editora</label>
+                    <input id="{{form.publisher.id_for_label}}" name="{{form.publisher.name}}" required="required" type="text" placeholder="Ex: nomeEditora"/> 
+                </p>
+
+                <div class="Flex">
+                    <input type="submit" value="Inserir" />
+                    <a href="{% url 'menu' %}" class="Flex-2">Menu Principal</a> 
+                </div>
+
+                </form>
+            </div>  
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
+
+
+
+

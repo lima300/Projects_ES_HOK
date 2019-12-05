@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Inserir Cupom</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/InserirCupom.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <a href="{% url 'menuCupom'%}" class="Flex-3">Voltar</a> 
+        </header>
+        <div class="box">
+            <div class="container" >
+                <form method="post">
+                {% csrf_token %}
+                  <h1>Inserir Cupom</h1> 
+                  <p> 
+                    <label for="{{form.name.id_for_label}}">Nome</label>
+                    <input id="{{form.name.id_for_label}}" name="{{form.name.name}}" required="required" type="text" placeholder="Ex: nomeCupom"/>
+                  </p>
+                    
+                  <p> 
+                    <label for="{{form.discount.id_for_label}}">Valor de Desconto</label>
+                    <input id="{{form.discount.id_for_label}}" name="{{form.discount.name}}" required="required" type="number" min="1" max="9"placeholder="Ex: 0.1"/> 
+                 </p>
+                
+
+                <div class="Flex">
+                    <input type="submit" value="Inserir" />
+                    <a href="{% url 'menu'%}" class="Flex-2">Menu Principal</a>
+                </div>
+
+                </form>
+            </div>  
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
+
+
+
+
+

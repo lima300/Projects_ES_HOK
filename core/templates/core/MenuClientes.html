@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Menu de Clientes</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/MenuClientes.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <!--<a href="Menu.html" class="Flex-3">Voltar</a>--> 
+        </header>
+        <div class="container">
+            <div class="teste1">
+                <h1 id="subtitle">Clientes</h1>
+            </div>
+            <div class="teste2">
+                <div class="Flex">
+                    <a href="{% url 'save_client' %}" class="Flex-1">Inserir Clientes</a>
+                    <a href="{% url 'read_client'%}" class="Flex-1">Buscar Clientes</a>
+                </div>
+                <div class="Flex">
+                    <a href="{% url 'menu' %}" class="Flex-2">Menu Principal</a> 
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
+
+
+
+

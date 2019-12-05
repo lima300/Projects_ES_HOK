@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif&display=swap" rel="stylesheet">
+    <title>Inserir Vendas</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/InserirVendas.css' %}" />
+</head>
+    <body>        
+        <header>
+            <h1 id="title">HOK Library</h1>
+            <a href="{% url 'menuVendas'%}" class="Flex-3">Voltar</a>
+        </header>
+        <div class="box">
+            <div class="container" >
+                <form method="post">
+                {% csrf_token %}
+                  <h1>Alterar Venda</h1> 
+                  <p> 
+                    <label for="{{form.client.id_for_label}}"> Cliente </label>
+                    <br>
+                    <select id="{{form.client.id_for_label}}" name="{{form.client.name}}" value={{form.instance.client}}required="required"/>
+                    {% for id, name in form.client.field.choices %}
+                    <option value="{{ id }}">{{ name }}</option>
+                    {% endfor %}
+                    <select/>
+                 </p>
+                    
+                 <p> 
+                    <label for="{{form.employee.id_for_label}}"> Funcionario </label>
+                    <br>
+                    <select id="{{form.employee.id_for_label}}" name="{{form.employee.name}}" value={{form.instance.emplyee}}required="required"/>
+                    {% for id, name in form.employee.field.choices %}
+                    <option value="{{ id }}">{{ name }}</option>
+                    {% endfor %}
+                    <select/>
+                 </p>
+                 
+                  <p> 
+                    <label for="{{form.book.id_for_label}}">Produto</label>
+                    <br>
+                    <select id="{{form.book.id_for_label}}" name="{{form.book.name}}" value={{form.instance.book}}required="required" />
+                    {% for id, name in form.book.field.choices %}
+                    <option value="{{ id }}">{{ name }}</option>
+                    {% endfor %}
+                    <select/>
+                 </p>
+                
+                 <p> 
+                   <label for="{{form.cupom.id_for_label}}">Cupom</label>
+                   <br>
+                   <select id="{{form.cupom.id_for_label}}" name="{{form.cupom.name}}" value="{{form.instance.cupom}}"required="required"/>
+                   {% for id, name in form.cupom.field.choices %}
+                    <option value="{{ id }}">{{ name }}</option>
+                    {% endfor %}
+                    <select/>
+                 </p>
+
+                 <p> 
+                    <label for="{{form.price.id_for_label}}">Preço</label>
+                    <input id="{{form.price.id_for_label}}" name="{form.price.name}" required="required" type="text" value="{{form.instance.price}}"readonly/> 
+                 </p>
+
+                <div class="Flex">
+                    <input type="submit" value="Inserir" />
+                    <a href="{% url 'menu' %}" class="Flex-2">Menu Principal</a> 
+                </div>
+
+                </form>
+            </div>  
+        </div>
+    </body>
+    <footer>
+        <h4>Software desenvolvido por HOK Group - Versão 1.0 - 2019</h4>
+    </footer>    
+</html>
