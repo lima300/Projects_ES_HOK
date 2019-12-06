@@ -136,7 +136,7 @@ def save_sale(request):
         if object.cupom is None:
             object.price = object.book.price
         else:
-            object.price = (1-object.cupom.discount) * object.book.price
+            object.price = (1-(object.cupom.discount/100)) * object.book.price
         object.save()
         data['sales'] = Sale.objects.all()
         return render(request, 'core/ManterVendas.html', data)

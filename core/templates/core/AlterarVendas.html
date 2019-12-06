@@ -50,7 +50,7 @@
                  <p> 
                    <label for="{{form.cupom.id_for_label}}">Cupom</label>
                    <br>
-                   <select id="{{form.cupom.id_for_label}}" name="{{form.cupom.name}}" value="{{form.instance.cupom}}"required="required"/>
+                   <select id="{{form.cupom.id_for_label}}" name="{{form.cupom.name}}" value="{{form.instance.cupom}}"/>
                    {% for id, name in form.cupom.field.choices %}
                     <option value="{{ id }}">{{ name }}</option>
                     {% endfor %}
