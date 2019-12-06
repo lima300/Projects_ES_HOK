@@ -22,7 +22,11 @@
                     <br>
                     <select id="{{form.client.id_for_label}}" name="{{form.client.name}}" value={{form.instance.client}}required="required"/>
                     {% for id, name in form.client.field.choices %}
-                    <option value="{{ id }}">{{ name }}</option>
+                        {% if id == form.instance.client.id %}
+                        <option selected="selected" value="{{ id }}">{{ name }} </option>
+                        {% else %}
+                        <option  value="{{ id }}">{{ name }} </option>
+                        {% endif %}
                     {% endfor %}
                     <select/>
                  </p>
@@ -32,7 +36,11 @@
                     <br>
                     <select id="{{form.employee.id_for_label}}" name="{{form.employee.name}}" value={{form.instance.emplyee}}required="required"/>
                     {% for id, name in form.employee.field.choices %}
-                    <option value="{{ id }}">{{ name }}</option>
+                        {% if id == form.instance.employee.id %}
+                        <option selected="selected" value="{{ id }}">{{ name }} </option>
+                        {% else %}
+                        <option  value="{{ id }}">{{ name }} </option>
+                        {% endif %}
                     {% endfor %}
                     <select/>
                  </p>
@@ -40,9 +48,13 @@
                   <p> 
                     <label for="{{form.book.id_for_label}}">Produto</label>
                     <br>
-                    <select id="{{form.book.id_for_label}}" name="{{form.book.name}}" value={{form.instance.book}}required="required" />
+                    <select id="{{form.book.id_for_label}}" name="{{form.book.name}}" required="required" />
                     {% for id, name in form.book.field.choices %}
-                    <option value="{{ id }}">{{ name }}</option>
+                        {% if id == form.instance.book.id %}
+                        <option selected="selected" value="{{ id }}">{{ name }} </option>
+                        {% else %}
+                        <option  value="{{ id }}">{{ name }} </option>
+                        {% endif %}
                     {% endfor %}
                     <select/>
                  </p>
@@ -52,7 +64,11 @@
                    <br>
                    <select id="{{form.cupom.id_for_label}}" name="{{form.cupom.name}}" value="{{form.instance.cupom}}"/>
                    {% for id, name in form.cupom.field.choices %}
-                    <option value="{{ id }}">{{ name }}</option>
+                        {% if id == form.instance.cupom.id %}
+                        <option selected="selected" value="{{ id }}">{{ name }} </option>
+                        {% else %}
+                        <option  value="{{ id }}">{{ name }} </option>
+                        {% endif %}
                     {% endfor %}
                     <select/>
                  </p>
