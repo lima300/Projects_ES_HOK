@@ -130,7 +130,6 @@ def delete_employee(request, pk):
 def save_sale(request):
     form = Sale_form(request.POST)
     data = {}
-    print(1)
     if form.is_valid():
         object = form.save(commit=False)
         if object.cupom is None:
@@ -151,7 +150,12 @@ def update_sale(request, pk):
     data = {}
 
     if form.is_valid():
-        form.save()
+        object = form.save(commit=False)
+        if object.cupom is None:
+            object.price = object.book.price
+        else:
+            object.price = (1-(object.cupom.discount/100)) * object.book.price
+        object.save()
         data['sales'] = Sale.objects.all()
         return render(request, 'core/ManterVendas.html', data )
 
